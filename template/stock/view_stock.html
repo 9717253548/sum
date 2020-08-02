@@ -1,0 +1,25 @@
+
+{% extends 'home.html' %}
+{% block content %}
+
+{% if stock %}
+
+<table border=solid,bold>
+<tr>
+<th>LOB</th>
+<th> models</th>
+<th>Chassis no</th>
+<th>Engine No</th
+</tr>
+{% for stocks in stock %} 
+<tr>
+<td>{{stocks.LOB}}</td>
+<td>{{stocks.Product_Line}}
+<td> {{stocks.Chassis_No}}</td>
+<td>{{stocks.Engine_No}}</td>
+   </tr>
+    {% endfor %}
+    </table>
+
+{% endif %}
+{% endblock %}
